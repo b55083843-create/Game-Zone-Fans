@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #18202a;
+  direction: rtl;
+}
+
+.header {
+  background: #ffffff;
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1769ff;
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #1769ff;
+}
+
+.hero {
+  padding: 90px 6%;
+  text-align: center;
+  background: linear-gradient(135deg, #eaf2ff, #ffffff);
+}
+
+.hero span {
+  color: #1769ff;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 15px 0;
+}
+
+.hero p {
+  font-size: 19px;
+  color: #5b6470;
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+.button {
+  display: inline-block;
+  background: #1769ff;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.section {
+  padding: 55px 6%;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card,
+.news-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card h3,
+.news-card h3 {
+  margin: 12px 0 8px;
+}
+
+.card p,
+.news-card p {
+  color: #697386;
+  line-height: 1.6;
+}
+
+.game-image {
+  height: 150px;
+  border-radius: 12px;
+  background: #eaf2ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.news-card span {
+  color: #1769ff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.stats {
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stats-grid div {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #e5e7eb;
+}
+
+.stats-grid strong {
+  display: block;
+  font-size: 38px;
+  color: #1769ff;
+}
+
+.stats-grid span {
+  display: block;
+  margin-top: 8px;
+  color: #697386;
+}
+
+.esports {
+  text-align: center;
+  background: #ffffff;
+  border-radius: 18px;
+  margin-bottom: 50px;
+}
+
+.esports p {
+  color: #697386;
+  font-size: 18px;
+}
+
+footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+@media (max-width: 850px) {
+  .header {
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 550px) {
+  .grid,
+  .news-list,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  nav {
+    gap: 10px;
+    font-size: 14px;
+  }
+}
