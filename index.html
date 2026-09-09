@@ -1,98 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./style.css";
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Game Zone Fans - أخبار الألعاب والإحصائيات والرياضات الإلكترونية" />
+    <title>Game Zone Fans</title>
+  </head>
 
-const games = [
-  { name: "GTA VI", genre: "Action", platform: "PS5 • Xbox Series X/S" },
-  { name: "EA Sports FC 26", genre: "Sports", platform: "PS5 • Xbox • PC" },
-  { name: "Minecraft", genre: "Adventure", platform: "PC • Console • Mobile" },
-  { name: "Fortnite", genre: "Battle Royale", platform: "PC • Console • Mobile" }
-];
-
-const news = [
-  "أحدث أخبار الألعاب والإصدارات الجديدة",
-  "أهم أخبار GTA VI",
-  "آخر أخبار EA Sports FC 26",
-  "أخبار البطولات والرياضات الإلكترونية"
-];
-
-function App() {
-  return (
-    <div>
-      <header className="header">
-        <div className="logo">🎮 Game Zone Fans</div>
-        <nav>
-          <a href="#home">الرئيسية</a>
-          <a href="#games">الألعاب</a>
-          <a href="#news">الأخبار</a>
-          <a href="#stats">الإحصائيات</a>
-          <a href="#esports">كأس العالم للرياضات الإلكترونية</a>
-        </nav>
-      </header>
-
-      <main>
-        <section id="home" className="hero">
-          <span>GAME ZONE FANS</span>
-          <h1>عالم الألعاب بين يديك</h1>
-          <p>
-            أخبار الألعاب، الإصدارات، الإحصائيات والرياضات الإلكترونية في مكان واحد.
-          </p>
-          <a className="button" href="#games">اكتشف الألعاب</a>
-        </section>
-
-        <section id="games" className="section">
-          <h2>🎮 أشهر الألعاب</h2>
-          <div className="grid">
-            {games.map((game) => (
-              <article className="card" key={game.name}>
-                <div className="game-image">🎮</div>
-                <h3>{game.name}</h3>
-                <p>النوع: {game.genre}</p>
-                <small>{game.platform}</small>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="news" className="section">
-          <h2>📰 آخر الأخبار</h2>
-          <div className="news-list">
-            {news.map((item, index) => (
-              <article className="news-card" key={index}>
-                <span>NEWS</span>
-                <h3>{item}</h3>
-                <p>تابع Game Zone Fans لمعرفة أحدث التفاصيل.</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="stats" className="section stats">
-          <h2>📊 إحصائيات الألعاب</h2>
-          <div className="stats-grid">
-            <div><strong>4+</strong><span>ألعاب مميزة</span></div>
-            <div><strong>24/7</strong><span>أخبار الألعاب</span></div>
-            <div><strong>100%</strong><span>محتوى ألعاب</span></div>
-          </div>
-        </section>
-
-        <section id="esports" className="section esports">
-          <h2>🏆 كأس العالم للرياضات الإلكترونية</h2>
-          <p>
-            تابع أهم البطولات والفرق والنتائج في عالم الرياضات الإلكترونية.
-          </p>
-        </section>
-      </main>
-
-      <footer>
-        <p>© 2026 Game Zone Fans — جميع الحقوق محفوظة</p>
-      </footer>
-    </div>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
